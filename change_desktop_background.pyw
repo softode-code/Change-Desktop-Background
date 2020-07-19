@@ -15,11 +15,6 @@ def changeBG():
 
 schedule.every(1).hours.do(changeBG)
 
-f = open('Change Background PID.txt','w+')
-pid = os.getpid()
-f.write(str(pid))
-f.close()
-
 while True:
     schedule.run_pending()
     time.sleep(1)
